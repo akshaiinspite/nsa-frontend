@@ -1,0 +1,118 @@
+.contact-info {
+  padding: 80px 0;
+  background: var(--clr-gray-100);
+}
+
+.contact-info__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.contact-info__card {
+  background: var(--clr-white);
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--clr-gray-200);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all var(--transition-base);
+}
+
+.contact-info__card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--clr-primary-light);
+}
+
+.contact-info__icon-box {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--clr-primary-bg);
+  color: var(--clr-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: all var(--transition-base);
+}
+
+.contact-info__card:hover .contact-info__icon-box {
+  background: var(--clr-primary);
+  color: var(--clr-white);
+}
+
+.contact-info__card-title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--clr-gray-800);
+  margin-bottom: 12px;
+}
+
+.contact-info__card-detail {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--clr-gray-600);
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+.contact-info__card-detail--hours {
+  margin-top: 10px;
+  margin-bottom: 0;
+  flex-grow: 0;
+}
+
+.contact-info__link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--clr-primary);
+  transition: color var(--transition-fast);
+}
+
+.contact-info__link:hover {
+  color: var(--clr-primary-dark);
+}
+
+.contact-info__phones,
+.contact-info__emails {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+.contact-info__phone-link,
+.contact-info__email-link {
+  font-size: 0.9rem;
+  font-weight: 550;
+  color: var(--clr-gray-800);
+  transition: color var(--transition-fast);
+}
+
+.contact-info__phone-link:hover,
+.contact-info__email-link:hover {
+  color: var(--clr-primary);
+}
+
+@media (max-width: 1200px) {
+  .contact-info__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .contact-info__grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .contact-info {
+    padding: 60px 0;
+  }
+}

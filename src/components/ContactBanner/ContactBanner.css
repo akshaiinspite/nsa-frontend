@@ -1,0 +1,84 @@
+.contact-banner {
+  position: relative;
+  padding: 80px 0 80px;
+  background-image: url('/banners/contact-banner-bg.png');
+  background-size: cover;
+  background-position: center;
+  color: var(--clr-white);
+  text-align: center;
+  overflow: hidden;
+}
+
+.contact-banner__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 15, 20, 0.82),
+    rgba(0, 50, 52, 0.88)
+  );
+  z-index: 1;
+}
+
+.contact-banner__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeInUp 0.7s ease forwards;
+}
+
+.contact-banner__title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 5vw, 3.8rem);
+  font-weight: 800;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+  color: var(--clr-white) !important;
+}
+
+.contact-banner__subtitle {
+  font-size: 1.15rem;
+  opacity: 0.95;
+  margin-bottom: 28px;
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.contact-banner__breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.92rem;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px 26px;
+  border-radius: var(--radius-xl);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: var(--clr-white) !important;
+}
+
+.contact-banner__breadcrumb a {
+  color: rgba(255, 255, 255, 0.95) !important;
+  font-weight: 600;
+  transition: color var(--transition-fast);
+}
+
+.contact-banner__breadcrumb a:hover {
+  color: var(--clr-accent) !important;
+}
+
+.contact-banner__divider {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.contact-banner__current {
+  color: var(--clr-accent) !important;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .contact-banner {
+    padding: 60px 0 50px;
+  }
+}

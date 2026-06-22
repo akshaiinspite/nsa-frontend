@@ -1,0 +1,345 @@
+/* ============================================
+   WHY CHOOSE NSA & WHY KOCHI
+   ============================================ */
+
+/* SECTION 1: Why Choose National Skill Academy */
+.nsa-why {
+  padding: 80px 0;
+  background: var(--clr-white);
+  overflow: hidden;
+}
+
+.nsa-why__inner.visible .reveal,
+.kochi-why__inner.visible .reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.nsa-why__header {
+  text-align: center;
+  margin-bottom: 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nsa-why__header .section-label {
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.nsa-why__intro-content {
+  max-width: 800px;
+  margin: 24px auto 0;
+  text-align: center;
+}
+
+.nsa-why__text {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--clr-gray-500);
+  margin-bottom: 18px;
+}
+
+.nsa-why__cta-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
+}
+
+/* Grid of 6 Square Cards */
+.nsa-why__cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.nsa-why__image-card {
+  position: relative;
+  height: 180px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 16px 20px 24px;
+  text-align: center;
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-sm);
+}
+
+.nsa-why__image-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.nsa-why__card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.65) 100%
+  );
+  z-index: 1;
+  transition: background var(--transition-base);
+}
+
+.nsa-why__image-card:hover .nsa-why__card-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.05) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+}
+
+.nsa-why__card-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+  width: 100%;
+}
+
+.nsa-why__card-number {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--clr-primary-light);
+  line-height: 1;
+  opacity: 0.95;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.nsa-why__card-title {
+  font-family: var(--font-heading);
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--clr-white);
+  line-height: 1.4;
+  margin: 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), -1px -1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* SECTION 2: Why Kochi */
+.kochi-why {
+  position: relative;
+  background: var(--clr-gray-100);
+}
+
+.kochi-why__banner {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.kochi-why__banner-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+
+.kochi-why__banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  z-index: 1;
+}
+
+.kochi-why__banner-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.kochi-why__title {
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 16px;
+  line-height: 1.1;
+}
+
+.kochi-why__title-serif {
+  font-family: Georgia, serif;
+  font-size: 3.8rem;
+  font-weight: 400;
+  color: var(--clr-white);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.kochi-why__title-sans {
+  font-family: var(--font-heading), sans-serif;
+  font-size: 4.5rem;
+  font-weight: 800;
+  color: var(--clr-accent);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.kochi-why__content {
+  position: relative;
+  padding: 80px 0;
+  z-index: 2;
+  background: var(--clr-white);
+}
+
+.kochi-why__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.kochi-why__card {
+  background: var(--clr-primary);
+  color: var(--clr-white);
+  border-radius: 40px;
+  padding: 80px 24px 30px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 60px;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.kochi-why__card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  background: var(--clr-primary-dark);
+}
+
+.kochi-why__card-top {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: var(--clr-white);
+  border: 3px solid var(--clr-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: var(--shadow-sm);
+}
+
+.kochi-why__card:hover .kochi-why__card-top {
+  border-color: var(--clr-primary-dark);
+}
+
+.kochi-why__card-icon {
+  color: var(--clr-primary);
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+}
+
+.kochi-why__card:hover .kochi-why__card-icon {
+  color: var(--clr-primary-dark);
+}
+
+.kochi-why__card-label {
+  font-family: var(--font-heading);
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: var(--clr-primary);
+  margin: 0;
+}
+
+.kochi-why__card:hover .kochi-why__card-label {
+  color: var(--clr-primary-dark);
+}
+
+.kochi-why__card-desc {
+  font-size: 0.88rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
+.kochi-why__footer {
+  text-align: center;
+  margin-top: 60px;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.kochi-why__footer-text {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--clr-gray-700);
+  font-weight: 450;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1200px) {
+  .nsa-why__cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .kochi-why__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nsa-why {
+    padding: 60px 0;
+  }
+
+  .nsa-why__cards-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .nsa-why__image-card {
+    aspect-ratio: auto;
+    min-height: 150px;
+    padding: 24px;
+  }
+
+  .kochi-why__grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .kochi-why__card {
+    max-width: 380px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .kochi-why__footer-text {
+    font-size: 0.95rem;
+    line-height: 1.75;
+  }
+}

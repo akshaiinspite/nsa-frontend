@@ -1,0 +1,43 @@
+/* ============================================
+   OUR TEAM
+   ============================================ */
+.ourteam-section {
+  padding: var(--section-padding);
+  background: var(--clr-white);
+  overflow: hidden;
+}
+
+.ourteam-section__header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.ourteam-group-photo {
+  max-width: 580px;
+  margin: 0 auto;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--clr-gray-200);
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+}
+
+.ourteam-group-photo:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--clr-primary-light);
+}
+
+.ourteam-group-photo__img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ourteam-group-photo {
+    max-width: 90%;
+  }
+}

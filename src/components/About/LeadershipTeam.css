@@ -1,0 +1,117 @@
+/* ============================================
+   LEADERSHIP TEAM
+   ============================================ */
+.leadership-section {
+  padding: var(--section-padding);
+  background: var(--clr-gray-100);
+  overflow: hidden;
+}
+
+.leadership-section__header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.leadership-section__header .section-label {
+  justify-content: center;
+}
+
+.leadership-section__subtitle {
+  font-size: 1.05rem;
+  color: var(--clr-gray-400);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.leadership-card--top {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: 100%;
+  max-width: 312px;
+}
+
+.leadership-card {
+  background: var(--clr-primary-dark);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+  display: flex;
+  flex-direction: column;
+}
+
+.leadership-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+}
+
+.leadership-card__image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: var(--clr-white);
+}
+
+.leadership-card__image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  transition: transform var(--transition-slow);
+  padding: 16px;
+}
+
+.leadership-card:hover .leadership-card__image-wrapper img {
+  transform: scale(1.05);
+}
+
+.leadership-card__info {
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background: var(--clr-primary);
+  color: var(--clr-white);
+}
+
+.leadership-card__name {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--clr-white);
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.leadership-card__role {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .leadership-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .leadership-grid {
+    grid-template-columns: 1fr;
+  }
+}

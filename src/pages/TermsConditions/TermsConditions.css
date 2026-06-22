@@ -1,0 +1,153 @@
+.terms-banner {
+  background-image: url('/banners/policy-banner.png') !important;
+}
+
+.terms-body {
+  padding: 80px 0;
+  background-color: var(--clr-gray-100);
+}
+
+.terms-paper {
+  background: var(--clr-white);
+  border-radius: var(--radius-lg);
+  padding: 60px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--clr-gray-200);
+}
+
+.terms-update-date {
+  font-size: 0.9rem;
+  color: var(--clr-primary);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 24px;
+}
+
+.terms-intro {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--clr-gray-800);
+  border-bottom: 1.5px solid var(--clr-gray-200);
+  padding-bottom: 30px;
+  margin-bottom: 40px;
+}
+
+.terms-intro p {
+  margin-bottom: 16px;
+}
+
+.terms-intro p:last-child {
+  margin-bottom: 0;
+}
+
+.terms-intro a {
+  color: var(--clr-primary);
+  font-weight: 600;
+  border-bottom: 1px dashed var(--clr-primary);
+  transition: all var(--transition-fast);
+}
+
+.terms-intro a:hover {
+  color: var(--clr-primary-dark);
+  border-bottom-style: solid;
+}
+
+.terms-sections-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.terms-section-card {
+  padding: 30px;
+  border-radius: var(--radius-md);
+  background: var(--clr-off-white);
+  border-left: 4px solid var(--clr-accent);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.terms-section-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+  background: var(--clr-white);
+}
+
+.terms-section-title {
+  font-size: 1.45rem;
+  color: var(--clr-gray-800);
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.terms-section-card > p {
+  color: var(--clr-gray-800);
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+}
+
+.terms-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.terms-list li {
+  position: relative;
+  padding-left: 24px;
+  color: var(--clr-gray-800);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.terms-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--clr-accent-hover);
+  font-weight: bold;
+}
+
+.terms-note {
+  margin-top: 20px;
+  font-style: italic;
+  font-size: 0.98rem;
+  color: var(--clr-gray-700);
+  padding: 10px 16px;
+  background: var(--clr-gray-100);
+  border-radius: var(--radius-sm);
+  display: inline-block;
+  border-left: 3px solid var(--clr-primary);
+}
+
+.terms-section-card a {
+  color: var(--clr-primary);
+  font-weight: 600;
+  transition: color var(--transition-fast);
+  text-decoration: underline;
+}
+
+.terms-section-card a:hover {
+  color: var(--clr-primary-dark);
+}
+
+@media (max-width: 992px) {
+  .terms-paper {
+    padding: 40px 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .terms-body {
+    padding: 40px 0;
+  }
+  
+  .terms-paper {
+    padding: 30px 15px;
+  }
+  
+  .terms-section-card {
+    padding: 20px 15px;
+  }
+}

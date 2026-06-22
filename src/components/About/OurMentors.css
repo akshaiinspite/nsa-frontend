@@ -1,0 +1,95 @@
+/* ============================================
+   OUR MENTORS
+   ============================================ */
+.ourmentors-section {
+  padding: var(--section-padding);
+  background: var(--clr-gray-100);
+  overflow: hidden;
+}
+
+.ourmentors-section__header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.ourmentors-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ourmentors-card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+  aspect-ratio: 0.85;
+  background: var(--clr-white);
+  border: 1px solid var(--clr-gray-200);
+}
+
+.ourmentors-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--clr-primary-light);
+}
+
+.ourmentors-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+  transition: transform var(--transition-slow);
+  padding: 16px 16px 85px 16px;
+}
+
+.ourmentors-card:hover .ourmentors-card__image {
+  transform: scale(1.05);
+}
+
+.ourmentors-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.88) 0%,
+    rgba(0, 0, 0, 0.5) 45%,
+    transparent 75%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px 16px;
+}
+
+.ourmentors-card__name {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--clr-white);
+  margin-bottom: 6px;
+  line-height: 1.25;
+}
+
+.ourmentors-card__role {
+  font-size: 0.72rem;
+  color: var(--clr-primary-light);
+  line-height: 1.4;
+  font-weight: 550;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .ourmentors-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .ourmentors-grid {
+    grid-template-columns: 1fr;
+  }
+}

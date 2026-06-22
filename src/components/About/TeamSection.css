@@ -1,0 +1,179 @@
+/* ============================================
+   TEAM GRID — shared across Advisory, Leadership, Our Team
+   ============================================ */
+.team-section {
+  padding: var(--section-padding);
+  overflow: hidden;
+}
+
+.team-section--alt {
+  background: var(--clr-gray-100);
+}
+
+.team-section__header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.team-section__header .section-label {
+  justify-content: center;
+}
+
+.team-section__header .section-label::after {
+  content: '';
+  width: 40px;
+  height: 2px;
+  background: var(--clr-primary);
+  border-radius: 2px;
+}
+
+.team-section__subtitle {
+  font-size: 1.05rem;
+  color: var(--clr-gray-400);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Card grid */
+.team-grid {
+  display: grid;
+  gap: 28px;
+}
+
+.team-grid--5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.team-grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Team card */
+.team-card {
+  background: var(--clr-white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+  border: 1px solid var(--clr-gray-200);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.team-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+  border-color: transparent;
+}
+
+.team-card__image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--clr-primary-bg) 0%, var(--clr-gray-100) 100%);
+}
+
+.team-card__image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform var(--transition-slow);
+}
+
+.team-card:hover .team-card__image-wrapper img {
+  transform: scale(1.06);
+}
+
+.team-card__image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 100, 104, 0.6) 0%, transparent 50%);
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.team-card:hover .team-card__image-overlay {
+  opacity: 1;
+}
+
+.team-card__info {
+  padding: 20px 16px 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.team-card__name {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--clr-gray-800);
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+
+.team-card__role {
+  font-size: 0.72rem;
+  color: var(--clr-gray-400);
+  line-height: 1.5;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+/* Leadership variant — larger cards */
+.team-card--large .team-card__image-wrapper {
+  aspect-ratio: 4/5;
+}
+
+.team-card--large .team-card__info {
+  padding: 24px 20px 28px;
+}
+
+.team-card--large .team-card__name {
+  font-size: 1.15rem;
+}
+
+.team-card--large .team-card__role {
+  font-size: 0.78rem;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .team-grid--5 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .team-grid--5 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .team-grid--3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .team-card__info {
+    padding: 16px 12px 20px;
+  }
+
+  .team-card__name {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-grid--5,
+  .team-grid--3 {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+}

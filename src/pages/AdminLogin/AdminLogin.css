@@ -1,0 +1,235 @@
+/* ==========================================================================
+   ADMIN LOGIN STYLES — Premium Glassmorphism Theme
+   ========================================================================== */
+
+.admin-login-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: var(--clr-gray-800);
+  overflow: hidden;
+  padding: 40px 20px;
+  font-family: var(--font-body);
+}
+
+/* Background Shapes for Glassmorphism Context */
+.admin-login-bg-shapes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.admin-login-bg-shapes .shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+}
+
+.admin-login-bg-shapes .shape-1 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(0, 150, 154, 0.4) 0%, rgba(0, 100, 104, 0.1) 80%);
+  top: -100px;
+  right: -50px;
+}
+
+.admin-login-bg-shapes .shape-2 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255, 182, 6, 0.25) 0%, rgba(229, 163, 0, 0.05) 80%);
+  bottom: -150px;
+  left: -100px;
+}
+
+/* Login Card container */
+.admin-login-card {
+  width: 100%;
+  max-width: 480px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  padding: 50px 40px;
+  box-shadow: var(--shadow-xl), 0 30px 70px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 2;
+  position: relative;
+}
+
+/* Card Header */
+.admin-login-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.login-logo-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  transition: transform var(--transition-fast);
+}
+
+.login-logo-link:hover {
+  transform: scale(1.05);
+}
+
+.login-logo {
+  height: 60px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.admin-login-header h2 {
+  font-family: var(--font-heading);
+  color: var(--clr-white);
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+.admin-login-header p {
+  color: var(--clr-gray-400);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* Form Styles */
+.admin-login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Input Group */
+.form-group-custom {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group-custom label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--clr-gray-300);
+  transition: color var(--transition-fast);
+  text-align: left;
+}
+
+.form-group-custom input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  font-size: 1rem;
+  color: var(--clr-white);
+  outline: none;
+  font-family: var(--font-body);
+  transition: all var(--transition-fast);
+}
+
+.form-group-custom input:focus {
+  border-color: var(--clr-primary);
+  background: rgba(0, 150, 154, 0.02);
+  box-shadow: 0 0 0 3px rgba(0, 150, 154, 0.15);
+}
+
+.form-group-custom input:focus + label {
+  color: var(--clr-primary);
+}
+
+/* Override browser default autofill backgrounds and text color */
+.form-group-custom input:-webkit-autofill,
+.form-group-custom input:-webkit-autofill:hover, 
+.form-group-custom input:-webkit-autofill:focus, 
+.form-group-custom input:-webkit-autofill:active {
+  -webkit-text-fill-color: var(--clr-white) !important;
+  -webkit-box-shadow: 0 0 0px 1000px #13171d inset !important;
+  box-shadow: 0 0 0px 1000px #13171d inset !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Button & Loading states */
+.admin-login-btn {
+  margin-top: 10px;
+  height: 52px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  background: var(--clr-primary);
+  color: var(--clr-white);
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 150, 154, 0.3);
+  transition: all var(--transition-base);
+}
+
+.admin-login-btn:hover:not(:disabled) {
+  background: var(--clr-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 150, 154, 0.5);
+}
+
+.admin-login-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.login-spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: var(--clr-white);
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Footer elements */
+.admin-login-footer {
+  margin-top: 30px;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 20px;
+}
+
+.back-to-home {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--clr-gray-400);
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.back-to-home:hover {
+  color: var(--clr-primary);
+  transform: translateX(-3px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .admin-login-card {
+    padding: 35px 25px;
+  }
+  
+  .admin-login-header h2 {
+    font-size: 1.8rem;
+  }
+}

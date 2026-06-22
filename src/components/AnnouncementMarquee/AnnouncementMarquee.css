@@ -1,0 +1,116 @@
+.announcement-bar {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(90deg, #001e21 0%, #002e32 100%);
+  border-top: 1.5px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.08);
+  color: var(--clr-white);
+  height: 48px;
+  overflow: hidden;
+  font-family: var(--font-body);
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.announcement-bar__label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--clr-accent);
+  color: var(--clr-gray-800);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  padding: 0 24px;
+  height: 100%;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 12;
+  box-shadow: 6px 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.announcement-bar__icon {
+  font-size: 0.95rem;
+}
+
+.announcement-bar__marquee-container {
+  flex-grow: 1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  z-index: 11;
+}
+
+.announcement-bar__marquee {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+
+.announcement-bar__marquee-track {
+  display: flex;
+  white-space: nowrap;
+  animation: marquee-scroll 35s linear infinite;
+}
+
+.announcement-bar__marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.announcement-bar__text {
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding-right: 120px; /* Spacer between repeated texts */
+  display: inline-block;
+  letter-spacing: 0.3px;
+  color: rgba(255, 255, 255, 0.92);
+  flex-shrink: 0;
+}
+
+.announcement-bar__link {
+  color: var(--clr-accent);
+  font-weight: 750;
+  text-decoration: underline;
+  margin-left: 6px;
+  transition: color var(--transition-fast);
+}
+
+.announcement-bar__link:hover {
+  color: var(--clr-white);
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+/* Mobile responsive settings */
+@media (max-width: 768px) {
+  .announcement-bar {
+    height: auto;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .announcement-bar__label {
+    justify-content: center;
+    padding: 8px 0;
+    box-shadow: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .announcement-bar__marquee-container {
+    padding: 12px 0;
+  }
+
+  .announcement-bar__marquee-track {
+    animation-duration: 25s;
+  }
+}
