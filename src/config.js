@@ -7,4 +7,4 @@ const isLocalHost =
 
 export const API_BASE_URL =
   import.meta.env.VITE_API_BASE_URL ||
-  (isLocalHost ? 'http://localhost:5000' : 'https://nsa-backend-t6i9.onrender.com');
+  (isLocalHost ? 'http://localhost:5000' : 'https://nsa-backend-1.onrender.com');

@@ -55,10 +55,8 @@ export default function AdminLogin() {
         theme: 'colored',
       });
 
-      // Redirect to dashboard after a short delay to allow toast to show
-      setTimeout(() => {
-        navigate('/admin/dashboard');
-      }, 1500);
+      // Navigate immediately so Vercel users do not wait on an extra client-side delay.
+      navigate('/admin/dashboard');
 
     } catch (err) {
       toast.error(err.message || 'Server error. Please try again later.', {

@@ -40,6 +40,7 @@ export default function AdminDashboard() {
     }
 
     setAdminEmail(email || 'Admin');
+    setVerifying(false);
 
     // Verify token with backend
     fetch(`${API_BASE_URL}/api/admin/verify`, {
@@ -53,7 +54,6 @@ export default function AdminDashboard() {
         return res.json();
       })
       .then(() => {
-        setVerifying(false);
         fetchGalleryData();
         fetchAnnouncementData();
       })
